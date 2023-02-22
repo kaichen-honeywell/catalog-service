@@ -29,31 +29,7 @@ const App: NextPage<{ data: IAppData }> = (props) => {
           </tr>
           <tr>
             <td>version</td>
-            <td>{data?.version}</td>
-          </tr>
-          <tr>
-            <td>root url</td>
-            <td>{data?.rootUrl}</td>
-          </tr>
-          <tr>
-            <td>entry url</td>
-            <td>{data?.appEntryUrl}</td>
-          </tr>
-          <tr>
-            <td>release date</td>
-            <td>{data?.releaseDate}</td>
-          </tr>
-          <tr>
-            <td>routes</td>
-            <td>
-              <ul>
-                {data?.appRoutes.map((a) => (
-                  <li key={a.appRouteId}>
-                    {a.defaultName} : {a.rootUrl}
-                  </li>
-                ))}
-              </ul>
-            </td>
+            <td></td>
           </tr>
         </tbody>
       </table>

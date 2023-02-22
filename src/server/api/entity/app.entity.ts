@@ -1,6 +1,6 @@
 import { IAppData } from '../../../pojo';
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
-import { AppRouteEntity, convertAppRouteToEntity } from './route.entity';
+import { AppRouteEntity } from './route.entity';
 
 @Entity({ name: 'applications' })
 export class ApplicationEntity {
@@ -31,25 +31,9 @@ export class ApplicationEntity {
     (approute) => approute.application,
   )
   appRoutes: AppRouteEntity[];
-  @Column({ name: 'appparam', type: 'json' })
+  @Column({ name: 'appparam', type: 'simple-json' })
   appParams: { [key: string]: string }; // a k
 }
-
-export const convertAppDataToEntity = (appData: IAppData) => {
-  return {
-    appId: appData.appId,
-    defaultName: appData.defaultName,
-    nameKey: appData.nameKey,
-    iconName: appData.iconName,
-    description: appData.description,
-    rootUrl: appData.rootUrl,
-    appEntryUrl: appData.appEntryUrl,
-    version: appData.version,
-    releaseDate: appData.releaseDate,
-    appRoutes: appData.appRoutes.map((rt) => convertAppRouteToEntity(rt)),
-    appParams: appData.appParams,
-  } as ApplicationEntity;
-};
 
 export const convertDtoToAppData = (dto: ApplicationEntity) => {
   return {

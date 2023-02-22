@@ -4,8 +4,8 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 const source = new DataSource({
-  type: 'postgres' as const,
-  url: process.env.DATABASE_URL,
+  type: 'sqlite' as const,
+  database: 'appcatalog',
   entities: ['src/server/api/**/*.entity.ts'],
   synchronize: true,
   migrations: ['src/server/migration/*.{ts,js}'],

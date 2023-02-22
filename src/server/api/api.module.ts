@@ -16,11 +16,11 @@ import { AuthModule } from '../auth/auth.module';
     TypeOrmModule.forFeature([ApplicationEntity, AppRouteEntity]),
     TypeOrmModule.forRootAsync({
       useFactory: async (configService: ConfigService) => ({
-        type: 'postgres',
-        host: configService.get<string>('DATABASE_HOST'),
-        port: parseInt(configService.get<string>('DATABASE_PORT')),
-        username: configService.get<string>('DATABASE_USER'),
-        password: configService.get<string>('DATABASE_PASSWORD'),
+        type: 'sqlite',
+        //host: configService.get<string>('DATABASE_HOST'),
+        //port: parseInt(configService.get<string>('DATABASE_PORT')),
+        //username: configService.get<string>('DATABASE_USER'),
+        //password: configService.get<string>('DATABASE_PASSWORD'),
         database: configService.get<string>('DATABASE_NAME'),
         autoLoadEntities: true,
         ssl:

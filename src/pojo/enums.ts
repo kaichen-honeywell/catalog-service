@@ -5,8 +5,22 @@ export enum RouteTypeEnum {
   Internal = 0, // does not display, for internal redirect only.
 }
 
-export enum AppStatus {
-  stable = 0,
-  preview = 1,
-  inactive = 2,
+export enum FeatureFlag {
+  dev = 0,
+  test = 1,
+  prod = 2,
+  retire = 9,
+}
+
+export enum VersionStatusEnum {
+  stable,
+  preview,
+  inactive,
+}
+
+export enum NavTargetEnum {
+  Self = 0, //  target = '_self'
+  Blank = 1, // target='_blank'
+  Parent = 2, // target = '_parent'
+  Top = 3, // target = '_top'
 }

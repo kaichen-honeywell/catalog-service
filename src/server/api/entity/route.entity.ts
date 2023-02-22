@@ -1,4 +1,3 @@
-import { IAppRoute } from '../../../pojo';
 import {
   Column,
   Entity,
@@ -30,15 +29,15 @@ export class AppRouteEntity {
   application: ApplicationEntity;
 }
 
-export const convertAppRouteToEntity = (appRoute: IAppRoute) => {
-  return {
-    appRouteId: appRoute.appRouteId,
-    defaultName: appRoute.defaultName,
-  } as AppRouteEntity;
-};
+// export const convertAppRouteToEntity = (appRoute: IAppRoute) => {
+//   return {
+//     appRouteId: appRoute.appRouteId,
+//     defaultName: appRoute.defaultName,
+//   } as AppRouteEntity;
+// };
 
-export const convertEntityToAppRoute = (dto: AppRouteEntity) => {
-  return {
-    appRouteId: dto.appRouteId,
-  } as IAppRoute;
-};
+// export const convertEntityToAppRoute = (dto: AppRouteEntity) => {
+//   return {
+//     appRouteId: dto.appRouteId,
+//   } as IAppRoute;
+// };

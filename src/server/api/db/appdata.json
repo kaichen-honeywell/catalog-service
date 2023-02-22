@@ -1,115 +1,202 @@
-[
-    {
-    "appId": "1858ce4e-2eb0-4d6e-83ce-a12f96bdcd0a",
-    "defaultName": "user profile",
-    "nameKey": "app_name_user_profile",
-    "iconName": "icon-avatar",
-    "description": "user profile app",
-    "rootUrl":"/userprofile",
-    "component":"UserProfile",
-    "appEntryUrl": "userprofile@http://abc.xyz:3001/remoteEntry.js",
-    "version": "1.0.1",
-    "releaseDate": "2023-02-27T13:57:21.836+0000",
-    "appRoutes": [
-        {
-        "appRouteId" : 1,
-        "defaultName": "User Information",
-        "rootUrl":"/detail/:userid",
-        "component": "userdetail",
-        "iconName": "",
-        "nameKey": "page_name_user_profile_detail",
-        "children": [],
-        "appParams": {
-            ":userid": "__USER_ID__"
-           },
-        "routeType": [1,2]
-        },
-        {
-        "appRouteId" : 2,
-        "defaultName": "Settings",
-        "rootUrl":"/settings/:userid",
-        "component": "usersetting",
-        "iconName": "",
-        "nameKey": "page_name_user_settings",
-        "children": [],
-        "appParams": {
-            ":userid": "__USER_ID__"
-         },
-         "routeType": [1]
-
-        }
-    ],
-    "appParams": {},
-    "status": 0,
-    "manifestJSONString": "{}"
-    },
-    {
-        "appId": "c24db639-8afa-47cd-b78b-3d86c760386f",
-        "defaultName": "site operation",
-        "nameKey": "app_name_site_operation",
-        "iconName": "icon-arrow",
-        "description": "site operation SPA",
-        "rootUrl":"/operations",
-        "component":"SiteOperation",
-        "appEntryUrl": "siteoperations@http://abc.xyz:3001/remoteEntry.js",
-        "version": "2.1.3",
-        "releaseDate": "2022-12-14T18:57:51.372+0000",
-        "appRoutes": [
+{
+        "templateId": "1",
+        "tenantId": "2",    
+        "navGroups": [
             {
-                "appRouteId" : 3,
-                "defaultName": "Outbound Dashboard",
-                "rootUrl":"/outbound",
-                "component": "outbound",
-                "iconName": "",
-                "nameKey": "page_name_outbound_dashboard",
-                "children": [],
-                "appParams": {
-                  
-                   },
-                   "routeType": [1]
+            "groupId": "1",
+            "defaultName": "User Profile",
+            "textKey": "user_profile",
+            "icon": "icon-avatar",
+            "items":[
+            {
+                "navItemId": "1",
+                "defaultText": "User Settings",
+                "textKey": "user_settings",
+                "icon": "",
+                "url": "/usersetting",
+                "component": "Usersetting",
+                "target": 0,
+                "routeType": [1, 2],
+                "navParams": {},
+                "feature": {
+                    "featureId": "147",
+                    "featureName": "usersetting",
+                    "featureFlag": 0,
+                    "owner": "",
+                    "lastUpdate": "2023-02-21T18:53:13Z",
+                    "entryComponent": "usersetting",
+                    "metadataJSON": { } 
                 },
-                {
-                "appRouteId" : 4,
-                "defaultName": "Panda Dashboard",
-                "rootUrl":"/panda",
-                "component":"panda",
-                "iconName": "",
-                "nameKey": "page_name_panda_dashboard",
-                "children": [],
-                "appParams": {
-                  
-                 },
-                 "routeType": [1]
+                "version": {
+                    "versionId": "13",
+                    "versionText": "1.0.2",
+                    "app": "8827a4a3-a38d-42dd-9a13-7d59c208569d",
+                    "versionStatus": 0,
+                    "releaseDate": "2023-02-21T18:53:13Z",
+                    "remoteEntryFileUrl": "localhost:5002/remoteEntry.js",
+                    "metadataJSON": {}
                 },
+                "children": []
+            },
+            {
+                "navItemId": "2",
+                "defaultText": "Notification Setting",
+                "textKey": "notification_setting",
+                "icon": "icon-notify",
+                "url": "/notificationsetting",
+                "component": "Notificationsetting",
+                "target": 0,
+                "routeType": [1],
+                "navParams": {},
+                "feature": {
+                    "featureId": "6",
+                    "featureName": "notification-setting",
+                    "featureFlag": 0,
+                    "owner": "",
+                    "lastUpdate": "2023-02-03T18:53:13Z",
+                    "entryComponent": "notificationsetting",
+                    "metadataJSON": {} 
+                },
+                "version": {
+                    "versionId": "14",
+                    "versionText": "1.0.3",
+                    "app": "8827a4a3-a38d-42dd-9a13-7d59c208569d",
+                    "versionStatus": 0,
+                    "releaseDate": "2023-02-24T18:53:13Z",
+                    "remoteEntryFileUrl": "localhost:5002/remoteEntry.js",
+                    "metadataJSON": {}
+                },
+                "children": []
+            }
+            ]
+            },
+            {
+            "groupId": "2",
+            "defaultName": "Site Operation",
+            "textKey": "site_operation",
+            "icon": "icon-site",
+            "items":[
                 {
-                    "appRouteId" : 5,
-                    "defaultName": "Picking Dashboard",
-                    "rootUrl":"/picking",
-                    "component":"picking",
-                    "iconName": "",
-                    "nameKey": "page_name_picking_dashboard",
-                    "children": [],
-                    "appParams": {
-                     
-                       },
-                       "routeType": [1]
+                    "navItemId": "3",
+                    "defaultText": "Outbound",
+                    "textKey": "site_op_outbound",
+                    "icon": "",
+                    "url": "/outbound",
+                    "component": "Outbound",
+                    "target": 0,
+                    "routeType": [1],
+                    "navParams": {},
+                    "feature": {
+                        "featureId": "125",
+                        "featureName": "outbound",
+                        "featureFlag": 0,
+                        "owner": "",
+                        "lastUpdate": "2023-02-21T18:53:13Z",
+                        "entryComponent": "outbound",
+                        "metadataJSON": { } 
                     },
-                    {
-                    "appRouteId" : 6,
-                    "defaultName": "Shiping Dashboard",
-                    "rootUrl":"/shiping",
-                    "component":"shiping",
-                    "iconName": "",
-                    "nameKey": "page_name_shiping_dashboard",
-                    "children": [],
-                    "appParams": {
-                     
-                     },
-                     "routeType": [1]                     
-                    }
-        ],
-        "appParams": {},
-        "status": 0,
-        "manifestJSONString": "{}"
-        }
-]
+                    "version": {
+                        "versionId": "2",
+                        "versionText": "1.0.2",
+                        "app": "8827a4a3-a38d-42dd-9a13-7d59c208569d",
+                        "versionStatus": 0,
+                        "releaseDate": "2023-02-21T18:53:13Z",
+                        "remoteEntryFileUrl": "localhost:5003/remoteEntry.js",
+                        "metadataJSON": {}
+                    },
+                    "children": []
+                },
+                {
+                    "navItemId": "6",
+                    "defaultText": "Panda",
+                    "textKey": "site_op_panda",
+                    "icon": "",
+                    "url": "/panda",
+                    "component": "Panda",
+                    "target": 0,
+                    "routeType": [1],
+                    "navParams": {},
+                    "feature": {
+                        "featureId": "127",
+                        "featureName": "panda",
+                        "featureFlag": 0,
+                        "owner": "",
+                        "lastUpdate": "2023-02-21T18:53:13Z",
+                        "entryComponent": "panda",
+                        "metadataJSON": {} 
+                    },
+                    "version": {
+                        "versionId": "2",
+                        "versionText": "1.0.2",
+                        "app": "8827a4a3-a38d-42dd-9a13-7d59c208569d",
+                        "versionStatus": 0,
+                        "releaseDate": "2023-02-21T18:53:13Z",
+                        "remoteEntryFileUrl": "localhost:5003/remoteEntry.js",
+                        "metadataJSON": {}
+                    },
+                    "children": []
+                },
+                {
+                    "navItemId": "7",
+                    "defaultText": "Shipping",
+                    "textKey": "site_op_shipping",
+                    "icon": "",
+                    "url": "/shipping",
+                    "component": "Shipping",
+                    "target": 0,
+                    "routeType": [1],
+                    "navParams": {},
+                    "feature": {
+                        "featureId": "128",
+                        "featureName": "shipping",
+                        "featureFlag": 0,
+                        "owner": "",
+                        "lastUpdate": "2023-02-21T18:53:13Z",
+                        "entryComponent": "shipping",
+                        "metadataJSON": {} 
+                    },
+                    "version": {
+                        "versionId": "2",
+                        "versionText": "1.0.2",
+                        "app": "8827a4a3-a38d-42dd-9a13-7d59c208569d",
+                        "versionStatus": 0,
+                        "releaseDate": "2023-02-21T18:53:13Z",
+                        "remoteEntryFileUrl": "localhost:5003/remoteEntry.js",
+                        "metadataJSON": {}
+                    },
+                    "children": []
+                },
+                {
+                    "navItemId": "8",
+                    "defaultText": "Picking",
+                    "textKey": "site_op_picking",
+                    "icon": "",
+                    "url": "/picking",
+                    "component": "Picking",
+                    "target": 0,
+                    "routeType": [1],
+                    "navParams": {},
+                    "feature": {
+                        "featureId": "129",
+                        "featureName": "picking",
+                        "featureFlag": 0,
+                        "owner": "",
+                        "lastUpdate": "2023-02-21T18:53:13Z",
+                        "entryComponent": "picking",
+                        "metadataJSON": {} 
+                    },
+                    "version": {
+                        "versionId": "2",
+                        "versionText": "1.0.2",
+                        "app": "8827a4a3-a38d-42dd-9a13-7d59c208569d",
+                        "versionStatus": 0,
+                        "releaseDate": "2023-02-21T18:53:13Z",
+                        "remoteEntryFileUrl": "localhost:5003/remoteEntry.js",
+                        "metadataJSON": {}
+                    },
+                    "children": []
+                }
+            ]
+            }
+        ]
+}
